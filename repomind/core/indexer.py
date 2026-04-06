@@ -117,7 +117,7 @@ class AsyncIndexingPipeline:
 
             # Stage 3 + 4: Graph Build + Git Analysis (concurrent)
             hints = HintRegistry()
-            dynamic_edges = await asyncio.get_event_loop().run_in_executor(
+            dynamic_edges = await asyncio.get_running_loop().run_in_executor(
                 None, hints.extract_all, self._config.repo_path
             )
             git_metrics_map = {}
@@ -129,6 +129,9 @@ class AsyncIndexingPipeline:
 
             # Compute graph metrics (PageRank, communities) AFTER graph is built
             await self._compute_graph_metrics(graph_builder)
+
+            # Save graph immediately — so it persists even if Stage 6 crashes
+            await self._coordinator.save_graph()
 
             # Stage 5 + 6: Embed + Generate (concurrent per file)
             gen_sem = asyncio.Semaphore(self._config.llm.generation_concurrency)
@@ -297,14 +300,14 @@ class AsyncIndexingPipeline:
         )
 
         # Analyze all commits for co-change detection
-        all_commits = await asyncio.get_event_loop().run_in_executor(
+        all_commits = await asyncio.get_running_loop().run_in_executor(
             None, git.get_recent_commits
         )
         cochange_pairs = cochange.analyze(all_commits)
 
         # Per-file metrics
         for fp in files:
-            history = await asyncio.get_event_loop().run_in_executor(
+            history = await asyncio.get_running_loop().run_in_executor(
                 None, git.get_file_history, str(fp)
             )
             m = calculator.compute(history)
@@ -329,7 +332,7 @@ class AsyncIndexingPipeline:
     async def _compute_graph_metrics(self, builder: CodeGraphBuilder) -> None:
         self._emit("Computing Graph Metrics", 0, 1)
         analyzer = GraphAnalyzer(self._graph_store)
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         pagerank = await loop.run_in_executor(None, analyzer.compute_pagerank)
         communities = await loop.run_in_executor(None, analyzer.compute_communities)
         for node_id, centrality in pagerank.items():

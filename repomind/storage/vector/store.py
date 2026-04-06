@@ -48,7 +48,7 @@ class LanceDBStore:
 
     async def connect(self) -> None:
         self._dir.mkdir(parents=True, exist_ok=True)
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         self._db = await loop.run_in_executor(None, lancedb.connect, str(self._dir))
         _file_schema, _sym_schema, _chunk_schema = _make_schemas(self._vector_dim)
         self._file_docs = await self._get_or_create("file_docs", _file_schema)
@@ -56,7 +56,7 @@ class LanceDBStore:
         self._code_chunks = await self._get_or_create("code_chunks", _chunk_schema)
 
     async def _get_or_create(self, name: str, schema: pa.Schema) -> Any:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         try:
             return await loop.run_in_executor(None, self._db.open_table, name)
         except Exception:
@@ -66,7 +66,7 @@ class LanceDBStore:
             )
 
     async def upsert_file_doc(self, record: dict) -> None:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         # Delete existing first
         await loop.run_in_executor(
             None,
@@ -78,7 +78,7 @@ class LanceDBStore:
         await loop.run_in_executor(None, self._file_docs.add, table)
 
     async def upsert_symbol_doc(self, record: dict) -> None:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         await loop.run_in_executor(
             None,
             lambda: self._symbol_docs.delete(f"id = '{record['id']}'"),
@@ -87,7 +87,7 @@ class LanceDBStore:
         await loop.run_in_executor(None, self._symbol_docs.add, table)
 
     async def upsert_code_chunk(self, record: dict) -> None:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         table = pa.table({k: [v] for k, v in record.items()})
         await loop.run_in_executor(None, self._code_chunks.add, table)
 
@@ -98,7 +98,7 @@ class LanceDBStore:
         top_k: int = 10,
         language: str | None = None,
     ) -> list[dict]:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
 
         def _search() -> list[dict]:
             q = self._file_docs.search(vector).limit(top_k * 2)
@@ -115,7 +115,7 @@ class LanceDBStore:
         vector: list[float],
         top_k: int = 10,
     ) -> list[dict]:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
 
         def _search() -> list[dict]:
             return self._code_chunks.search(vector).limit(top_k).to_list()
@@ -123,7 +123,7 @@ class LanceDBStore:
         return await loop.run_in_executor(None, _search)
 
     async def get_file_doc_by_path(self, file_path: str) -> dict | None:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
 
         def _get() -> dict | None:
             results = (
@@ -137,7 +137,7 @@ class LanceDBStore:
         return await loop.run_in_executor(None, _get)
 
     async def delete_by_file_path(self, file_path: str) -> None:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         await loop.run_in_executor(
             None,
             lambda: self._file_docs.delete(f"file_path = '{file_path}'"),
@@ -153,7 +153,7 @@ class LanceDBStore:
 
     async def delete_pending_ids(self, ids: list[str]) -> None:
         """Roll back buffered inserts by ID."""
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         for doc_id in ids:
             id_str = f"id = '{doc_id}'"
             await loop.run_in_executor(None, lambda: self._file_docs.delete(id_str))
