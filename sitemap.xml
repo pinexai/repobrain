@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://pinexai.github.io/repomind/</loc>
+         <loc>https://pinexai.github.io/repobrain/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/comparison/</loc>
+         <loc>https://pinexai.github.io/repobrain/comparison/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/video-guide-script/</loc>
+         <loc>https://pinexai.github.io/repobrain/video-guide-script/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/architecture/coordinator/</loc>
+         <loc>https://pinexai.github.io/repobrain/architecture/coordinator/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/architecture/pipeline/</loc>
+         <loc>https://pinexai.github.io/repobrain/architecture/pipeline/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/architecture/temporal/</loc>
+         <loc>https://pinexai.github.io/repobrain/architecture/temporal/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/cli/</loc>
+         <loc>https://pinexai.github.io/repobrain/cli/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/cli/costs/</loc>
+         <loc>https://pinexai.github.io/repobrain/cli/costs/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/cli/index-cmd/</loc>
+         <loc>https://pinexai.github.io/repobrain/cli/index-cmd/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/cli/review/</loc>
+         <loc>https://pinexai.github.io/repobrain/cli/review/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/cli/serve/</loc>
+         <loc>https://pinexai.github.io/repobrain/cli/serve/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/getting-started/configuration/</loc>
+         <loc>https://pinexai.github.io/repobrain/getting-started/configuration/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/getting-started/installation/</loc>
+         <loc>https://pinexai.github.io/repobrain/getting-started/installation/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/getting-started/quickstart/</loc>
+         <loc>https://pinexai.github.io/repobrain/getting-started/quickstart/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/mcp/knowledge-map/</loc>
+         <loc>https://pinexai.github.io/repobrain/mcp/knowledge-map/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/mcp/overview/</loc>
+         <loc>https://pinexai.github.io/repobrain/mcp/overview/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/mcp/pr-impact/</loc>
+         <loc>https://pinexai.github.io/repobrain/mcp/pr-impact/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/mcp/security-hotspots/</loc>
+         <loc>https://pinexai.github.io/repobrain/mcp/security-hotspots/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
-         <loc>https://pinexai.github.io/repomind/mcp/test-gaps/</loc>
+         <loc>https://pinexai.github.io/repobrain/mcp/test-gaps/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
 </urlset>
