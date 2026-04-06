@@ -8,38 +8,39 @@ import lancedb
 import pyarrow as pa
 
 
-_FILE_DOCS_SCHEMA = pa.schema([
-    pa.field("id", pa.string()),
-    pa.field("repo_id", pa.string()),
-    pa.field("file_path", pa.string()),
-    pa.field("language", pa.string()),
-    pa.field("doc_summary", pa.string()),
-    pa.field("key_exports", pa.string()),
-    pa.field("vector", pa.list_(pa.float32(), 1536)),
-    pa.field("indexed_at", pa.string()),
-])
-
-_SYMBOL_DOCS_SCHEMA = pa.schema([
-    pa.field("id", pa.string()),
-    pa.field("file_path", pa.string()),
-    pa.field("name", pa.string()),
-    pa.field("kind", pa.string()),
-    pa.field("doc_text", pa.string()),
-    pa.field("vector", pa.list_(pa.float32(), 1536)),
-])
-
-_CODE_CHUNKS_SCHEMA = pa.schema([
-    pa.field("id", pa.string()),
-    pa.field("file_path", pa.string()),
-    pa.field("chunk_index", pa.int32()),
-    pa.field("content", pa.string()),
-    pa.field("vector", pa.list_(pa.float32(), 1536)),
-])
+def _make_schemas(dim: int) -> tuple[pa.Schema, pa.Schema, pa.Schema]:
+    file_docs = pa.schema([
+        pa.field("id", pa.string()),
+        pa.field("repo_id", pa.string()),
+        pa.field("file_path", pa.string()),
+        pa.field("language", pa.string()),
+        pa.field("doc_summary", pa.string()),
+        pa.field("key_exports", pa.string()),
+        pa.field("vector", pa.list_(pa.float32(), dim)),
+        pa.field("indexed_at", pa.string()),
+    ])
+    symbol_docs = pa.schema([
+        pa.field("id", pa.string()),
+        pa.field("file_path", pa.string()),
+        pa.field("name", pa.string()),
+        pa.field("kind", pa.string()),
+        pa.field("doc_text", pa.string()),
+        pa.field("vector", pa.list_(pa.float32(), dim)),
+    ])
+    code_chunks = pa.schema([
+        pa.field("id", pa.string()),
+        pa.field("file_path", pa.string()),
+        pa.field("chunk_index", pa.int32()),
+        pa.field("content", pa.string()),
+        pa.field("vector", pa.list_(pa.float32(), dim)),
+    ])
+    return file_docs, symbol_docs, code_chunks
 
 
 class LanceDBStore:
-    def __init__(self, vector_dir: Path) -> None:
+    def __init__(self, vector_dir: Path, vector_dim: int = 1536) -> None:
         self._dir = vector_dir
+        self._vector_dim = vector_dim
         self._db: Any = None
         self._file_docs: Any = None
         self._symbol_docs: Any = None
@@ -49,9 +50,10 @@ class LanceDBStore:
         self._dir.mkdir(parents=True, exist_ok=True)
         loop = asyncio.get_event_loop()
         self._db = await loop.run_in_executor(None, lancedb.connect, str(self._dir))
-        self._file_docs = await self._get_or_create("file_docs", _FILE_DOCS_SCHEMA)
-        self._symbol_docs = await self._get_or_create("symbol_docs", _SYMBOL_DOCS_SCHEMA)
-        self._code_chunks = await self._get_or_create("code_chunks", _CODE_CHUNKS_SCHEMA)
+        _file_schema, _sym_schema, _chunk_schema = _make_schemas(self._vector_dim)
+        self._file_docs = await self._get_or_create("file_docs", _file_schema)
+        self._symbol_docs = await self._get_or_create("symbol_docs", _sym_schema)
+        self._code_chunks = await self._get_or_create("code_chunks", _chunk_schema)
 
     async def _get_or_create(self, name: str, schema: pa.Schema) -> Any:
         loop = asyncio.get_event_loop()

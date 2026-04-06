@@ -20,7 +20,6 @@ from pathlib import Path
 from typing import Callable
 
 import anthropic
-from openai import AsyncOpenAI
 
 from .coordinator import AtomicStorageCoordinator
 from ..config import RepomindConfig
@@ -34,7 +33,8 @@ from ..graph.builder import CodeGraphBuilder
 from ..parsing import AsyncTreeSitterParser, HintRegistry
 from ..storage.graph import GraphStore
 from ..storage.sql import AsyncSQLiteDB, FileRepository, GitMetricsRepository
-from ..storage.vector import AsyncEmbedder, LanceDBStore
+from ..storage.vector import LanceDBStore
+from ..storage.vector.embedder import AsyncEmbedder, LocalEmbedder
 from ..utils.file_utils import detect_language, walk_repo
 from ..utils.hash_utils import content_hash, repo_id
 from ..utils.logging import get_logger
@@ -63,9 +63,21 @@ class AsyncIndexingPipeline:
         self._repo_id = repo_id(config.repo_path)
         config.ensure_data_dir()
 
+        # Choose embedder early so we know vector dim for the store
+        if config.openai_api_key:
+            from openai import AsyncOpenAI
+            _oai = AsyncOpenAI(api_key=config.openai_api_key)
+            self._embedder: AsyncEmbedder | LocalEmbedder = AsyncEmbedder(
+                model=config.llm.embedding_model,
+                client=_oai,
+                concurrency=config.llm.embedding_concurrency,
+            )
+        else:
+            self._embedder = LocalEmbedder(concurrency=config.llm.embedding_concurrency)
+
         # Storage
         self._db = AsyncSQLiteDB(config.db_path)
-        self._vector = LanceDBStore(config.vector_dir)
+        self._vector = LanceDBStore(config.vector_dir, vector_dim=self._embedder.dim)
         self._graph_store = GraphStore(config.graph_path)
         self._coordinator = AtomicStorageCoordinator(self._db, self._vector, self._graph_store)
 
@@ -89,12 +101,7 @@ class AsyncIndexingPipeline:
 
         # Set up LLM clients
         anthropic_client = anthropic.AsyncAnthropic(api_key=self._config.anthropic_api_key or None)
-        openai_client = AsyncOpenAI(api_key=self._config.openai_api_key or None)
-        embedder = AsyncEmbedder(
-            model=self._config.llm.embedding_model,
-            client=openai_client,
-            concurrency=self._config.llm.embedding_concurrency,
-        )
+        embedder = self._embedder
         cost_tracker = TokenspyCostTracker(self._db, self._repo_id)
         graph_builder = CodeGraphBuilder(self._graph_store, self._config.repo_path)
 
