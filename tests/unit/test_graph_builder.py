@@ -42,7 +42,7 @@ class TestCodeGraphBuilder:
 
     def test_add_file_stores_symbol_count(self, setup):
         graph, builder, root = setup
-        sym = Symbol(name="MyClass", kind="class", start_line=1, end_line=10)
+        sym = Symbol(name="MyClass", kind="class", line_start=1, line_end=10)
         pr = ParseResult(
             file_path="src/main.py",
             language="python",
@@ -64,7 +64,7 @@ class TestCodeGraphBuilder:
             file_path=str(root / "src" / "main.py"),
             language="python",
             symbols=[],
-            imports=[Import(source="./utils", is_dynamic=False)],
+            imports=[Import(source="./utils", names=[], is_dynamic=False)],
         )
         builder.add_file(pr)
         builder.add_imports(pr)
