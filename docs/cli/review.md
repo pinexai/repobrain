@@ -1,11 +1,11 @@
-# repomind review
+# repobrain review
 
 Analyze the blast radius and risk score of a pull request.
 
 ## Usage
 
 ```bash
-repomind review <PR_NUMBER_OR_BRANCH> [OPTIONS]
+repobrain review <PR_NUMBER_OR_BRANCH> [OPTIONS]
 ```
 
 ## Options

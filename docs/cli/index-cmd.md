@@ -1,11 +1,11 @@
-# repomind index
+# repobrain index
 
 Index a repository for codebase intelligence.
 
 ## Usage
 
 ```bash
-repomind index [PATH] [OPTIONS]
+repobrain index [PATH] [OPTIONS]
 ```
 
 `PATH` defaults to the current directory.
@@ -35,14 +35,14 @@ repomind index [PATH] [OPTIONS]
 
 ```bash
 # Index current directory
-repomind index
+repobrain index
 
 # Full re-index of a specific repo
-repomind index /path/to/repo --full
+repobrain index /path/to/repo --full
 
 # Incremental update (changed files only)
-repomind index --incremental
+repobrain index --incremental
 
 # Skip docs, just rebuild graph and metrics
-repomind index --no-docs --incremental
+repobrain index --no-docs --incremental
 ```

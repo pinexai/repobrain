@@ -1,8 +1,8 @@
-site_name: repomind
+site_name: repobrain
 site_description: Codebase intelligence that thinks ahead — outperforms repowise on every dimension
-site_url: https://pinexai.github.io/repomind
-repo_url: https://github.com/pinexai/repomind
-repo_name: pinexai/repomind
+site_url: https://pinexai.github.io/repobrain
+repo_url: https://github.com/pinexai/repobrain
+repo_name: pinexai/repobrain
 
 theme:
   name: material
@@ -38,10 +38,10 @@ nav:
     - Configuration: getting-started/configuration.md
   - CLI Reference:
     - Overview: cli/index.md
-    - repomind index: cli/index-cmd.md
-    - repomind review: cli/review.md
-    - repomind serve: cli/serve.md
-    - repomind costs: cli/costs.md
+    - repobrain index: cli/index-cmd.md
+    - repobrain review: cli/review.md
+    - repobrain serve: cli/serve.md
+    - repobrain costs: cli/costs.md
   - MCP Tools:
     - Overview: mcp/overview.md
     - get_pr_impact: mcp/pr-impact.md
@@ -70,6 +70,6 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/pinexai/repomind
+      link: https://github.com/pinexai/repobrain
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/repomind/
+      link: https://pypi.org/project/repobrain/

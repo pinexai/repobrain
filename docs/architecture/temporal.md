@@ -1,6 +1,6 @@
 # Temporal Scoring
 
-repomind weights recent commits exponentially more than old commits. This means a file changed 10 times last week ranks higher than a file changed 100 times 3 years ago.
+repobrain weights recent commits exponentially more than old commits. This means a file changed 10 times last week ranks higher than a file changed 100 times 3 years ago.
 
 ## The Formula
 
@@ -30,7 +30,7 @@ With `halflife_days = 180`:
 
 ## Percentile Ranks
 
-After every `upsert()`, repomind runs:
+After every `upsert()`, repobrain runs:
 
 ```sql
 UPDATE git_metrics

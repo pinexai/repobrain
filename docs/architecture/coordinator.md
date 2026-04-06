@@ -1,6 +1,6 @@
 # Atomic Transactions
 
-repomind maintains three stores: SQLite (metadata + metrics), LanceDB (embeddings + docs), and NetworkX (dependency graph). Writing to all three atomically is the key innovation that prevents the 5–15% silent consistency failures in repowise.
+repobrain maintains three stores: SQLite (metadata + metrics), LanceDB (embeddings + docs), and NetworkX (dependency graph). Writing to all three atomically is the key innovation that prevents the 5–15% silent consistency failures in repowise.
 
 ## The Problem (repowise)
 
@@ -44,4 +44,4 @@ health = await coordinator.health_check(repo_id)
 # }
 ```
 
-Use `repomind status` to run a health check interactively.
+Use `repobrain status` to run a health check interactively.

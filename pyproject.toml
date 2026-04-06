@@ -47,11 +47,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://pinexai.github.io/repomind"
-Repository = "https://github.com/pinexai/repomind"
-Documentation = "https://pinexai.github.io/repomind"
-"Bug Tracker" = "https://github.com/pinexai/repomind/issues"
-Changelog = "https://github.com/pinexai/repomind/blob/main/CHANGELOG.md"
+Homepage = "https://pinexai.github.io/repobrain"
+Repository = "https://github.com/pinexai/repobrain"
+Documentation = "https://pinexai.github.io/repobrain"
+"Bug Tracker" = "https://github.com/pinexai/repobrain/issues"
+Changelog = "https://github.com/pinexai/repobrain/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [
@@ -68,7 +68,7 @@ dev = [
 ]
 
 [project.scripts]
-repomind = "repomind.cli.main:cli"
+repobrain = "repomind.cli.main:cli"
 
 [tool.ruff]
 line-length = 100

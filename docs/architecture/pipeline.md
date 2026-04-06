@@ -1,6 +1,6 @@
 # Indexing Pipeline
 
-repomind's 7-stage async pipeline processes a 1000-file repo in under 5 minutes (vs 25+ minutes for repowise).
+repobrain's 7-stage async pipeline processes a 1000-file repo in under 5 minutes (vs 25+ minutes for repowise).
 
 ## Stages
 
@@ -45,7 +45,7 @@ Stage 7: Atomic Commit
 
 ## Why This Is Faster
 
-| Bottleneck | repowise | repomind |
+| Bottleneck | repowise | repobrain |
 |------------|----------|----------|
 | Parsing | Sequential, single-threaded | `ProcessPoolExecutor` |
 | Git + Graph | Sequential | Concurrent (`asyncio.gather`) |
@@ -54,7 +54,7 @@ Stage 7: Atomic Commit
 
 ## Incremental Updates
 
-On `repomind index --incremental`:
+On `repobrain index --incremental`:
 1. Compute SHA-256 hash of each file
 2. Compare against stored `content_hash` in SQLite
 3. Only re-process files whose hash changed

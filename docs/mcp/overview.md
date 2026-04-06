@@ -1,6 +1,6 @@
 # MCP Tools Overview
 
-repomind exposes 12 MCP tools to Claude. 8 improve on repowise's tools; 4 are entirely new.
+repobrain exposes 12 MCP tools to Claude. 8 improve on repowise's tools; 4 are entirely new.
 
 ## All Tools
 

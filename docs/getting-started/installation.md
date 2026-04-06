@@ -14,16 +14,16 @@ pip install repobrain
 ## Install for development
 
 ```bash
-git clone https://github.com/pinexai/repomind.git
-cd repomind
+git clone https://github.com/pinexai/repobrain.git
+cd repobrain
 pip install -e ".[dev]"
 ```
 
 ## Verify installation
 
 ```bash
-repomind --version
-# repomind 0.1.0
+repobrain --version
+# repobrain 0.1.0
 ```
 
 ## Optional: asciinema (for demo recording)

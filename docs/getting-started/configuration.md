@@ -7,7 +7,7 @@ All configuration is via environment variables or a `.env` file in your working 
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `ANTHROPIC_API_KEY` | *(required)* | Anthropic API key |
-| `REPOMIND_DATA_DIR` | `~/.repomind` | Where repomind stores indexes |
+| `REPOMIND_DATA_DIR` | `~/.repobrain` | Where repobrain stores indexes |
 | `REPOMIND_LOG_LEVEL` | `INFO` | Logging level |
 
 ## Git Analysis
@@ -36,7 +36,7 @@ All configuration is via environment variables or a `.env` file in your working 
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-api03-...
-REPOMIND_DATA_DIR=~/.repomind
+REPOMIND_DATA_DIR=~/.repobrain
 REPOMIND_MAX_COMMITS=10000
 REPOMIND_DECAY_HALFLIFE_DAYS=180
 REPOMIND_GENERATION_CONCURRENCY=5

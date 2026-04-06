@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/ -v --cov=repomind --cov-report=xml --cov-report=term-missing
+          pytest tests/ -v --cov=repobrain --cov-report=xml --cov-report=term-missing
 
       - name: Upload coverage
         uses: codecov/codecov-action@v4
@@ -48,4 +48,4 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install ruff
-      - run: ruff check repomind/
+      - run: ruff check repobrain/

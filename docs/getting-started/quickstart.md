@@ -15,7 +15,7 @@ ANTHROPIC_API_KEY=sk-ant-...
 ## 2. Index your repository
 
 ```bash
-repomind index /path/to/your/repo
+repobrain index /path/to/your/repo
 ```
 
 You'll see a Rich progress bar:
@@ -27,13 +27,13 @@ You'll see a Rich progress bar:
 For large repos, use incremental mode on subsequent runs:
 
 ```bash
-repomind index /path/to/your/repo --incremental
+repobrain index /path/to/your/repo --incremental
 ```
 
 ## 3. Check status
 
 ```bash
-repomind status
+repobrain status
 ```
 
 Shows hotspot rankings, index health, and consistency check across all three stores.
@@ -41,7 +41,7 @@ Shows hotspot rankings, index health, and consistency check across all three sto
 ## 4. Review a PR
 
 ```bash
-repomind review 42
+repobrain review 42
 ```
 
 Output includes:
@@ -54,33 +54,33 @@ Output includes:
 ## 5. Start MCP server
 
 ```bash
-repomind serve
+repobrain serve
 ```
 
-Then add repomind to your Claude Code MCP configuration:
+Then add repobrain to your Claude Code MCP configuration:
 
 ```json
 {
   "mcpServers": {
-    "repomind": {
-      "command": "repomind",
+    "repobrain": {
+      "command": "repobrain",
       "args": ["serve", "--mcp-only"]
     }
   }
 }
 ```
 
-Now Claude Code has access to all 12 repomind tools.
+Now Claude Code has access to all 12 repobrain tools.
 
 ## 6. Query your codebase
 
 ```bash
-repomind query "where is authentication handled?"
+repobrain query "where is authentication handled?"
 ```
 
 ## 7. Track LLM costs
 
 ```bash
-repomind costs
-repomind costs --since 2026-01-01 --by operation
+repobrain costs
+repobrain costs --since 2026-01-01 --by operation
 ```

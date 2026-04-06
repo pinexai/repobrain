@@ -1,20 +1,20 @@
-# repomind — Codebase Intelligence That Thinks Ahead
+# repobrain — Codebase Intelligence That Thinks Ahead
 
 [![PyPI version](https://img.shields.io/pypi/v/repobrain.svg)](https://pypi.org/project/repobrain/)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![CI](https://github.com/pinexai/repomind/actions/workflows/ci.yml/badge.svg)](https://github.com/pinexai/repomind/actions/workflows/ci.yml)
-[![Docs](https://img.shields.io/badge/docs-pinexai.github.io%2Frepomind-blue)](https://pinexai.github.io/repomind)
+[![CI](https://github.com/pinexai/repobrain/actions/workflows/ci.yml/badge.svg)](https://github.com/pinexai/repobrain/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-pinexai.github.io%2Frepobrain-blue)](https://pinexai.github.io/repobrain)
 
 > **10× faster indexing. RAG-aware documentation. PR blast radius. Temporal hotspots.**
 >
-> repomind is a codebase intelligence MCP server for Claude that fixes every critical flaw in repowise — then goes further.
+> repobrain is a codebase intelligence MCP server for Claude that fixes every critical flaw in repowise — then goes further.
 
 ---
 
 ## What's Wrong With Repowise (and How We Fix It)
 
-| # | Repowise Flaw | repomind Fix |
+| # | Repowise Flaw | repobrain Fix |
 |---|---------------|--------------|
 | 1 | **RAG context never used during generation** — vector store populated but never queried | `RAGAwareDocGenerator` fetches dependency docs from LanceDB *before* every LLM call |
 | 2 | **25+ min initial indexing** — no parallelism | 7-stage async pipeline; parse runs in `ProcessPoolExecutor`, git + parse run concurrently |
@@ -22,9 +22,9 @@
 | 4 | **Hardcoded 500-commit limit** | `GitConfig.max_commits = 10_000` — fully configurable |
 | 5 | **Dynamic imports invisible** (Django, pytest, importlib) — 20–40% missing graph edges | `DjangoDynamicHints`, `PytestDynamicHints`, `NodeDynamicHints` in `HintRegistry` |
 | 6 | **Incremental updates miss global percentile recalculation** | `upsert()` always triggers `PERCENT_RANK()` window function refresh |
-| 7 | **No PR blast radius analysis** | `PRBlastRadiusAnalyzer` + `repomind review <PR>` + `get_pr_impact` MCP tool |
+| 7 | **No PR blast radius analysis** | `PRBlastRadiusAnalyzer` + `repobrain review <PR>` + `get_pr_impact` MCP tool |
 | 8 | **Temporal blindness** — 3-year-old commits weighted same as yesterday's | Exponential decay: `score += exp(-ln(2) * age_days / halflife) * complexity` |
-| 9 | **Zero cost visibility** | `TokenspyCostAdapter` wraps every Anthropic call; `repomind costs` CLI |
+| 9 | **Zero cost visibility** | `TokenspyCostAdapter` wraps every Anthropic call; `repobrain costs` CLI |
 | 10 | **Conservative dead code** misses real candidates | Dynamic hint edges recovered; configurable sensitivity threshold |
 
 ---
@@ -47,13 +47,13 @@ cp .env.example .env
 # Edit .env — set ANTHROPIC_API_KEY
 
 # 2. Index your repo
-repomind index /path/to/your/repo
+repobrain index /path/to/your/repo
 
 # 3. Analyze a PR
-repomind review 42
+repobrain review 42
 
 # 4. Start MCP server for Claude Code
-repomind serve
+repobrain serve
 ```
 
 Then add to your Claude Code MCP config:
@@ -61,8 +61,8 @@ Then add to your Claude Code MCP config:
 ```json
 {
   "mcpServers": {
-    "repomind": {
-      "command": "repomind",
+    "repobrain": {
+      "command": "repobrain",
       "args": ["serve", "--mcp-only"]
     }
   }
@@ -75,12 +75,12 @@ Then add to your Claude Code MCP config:
 
 | Command | Description |
 |---------|-------------|
-| `repomind index [PATH]` | Index a repository (full or incremental) |
-| `repomind review <PR>` | Analyze PR blast radius and risk score |
-| `repomind serve` | Start MCP server (+ optional webhook) |
-| `repomind status` | Show hotspot rankings and index health |
-| `repomind query "<NL>"` | Natural language codebase search |
-| `repomind costs [--since DATE]` | Show per-operation LLM spend |
+| `repobrain index [PATH]` | Index a repository (full or incremental) |
+| `repobrain review <PR>` | Analyze PR blast radius and risk score |
+| `repobrain serve` | Start MCP server (+ optional webhook) |
+| `repobrain status` | Show hotspot rankings and index health |
+| `repobrain query "<NL>"` | Natural language codebase search |
+| `repobrain costs [--since DATE]` | Show per-operation LLM spend |
 
 **Rich progress during indexing:**
 ```
@@ -111,7 +111,7 @@ Then add to your Claude Code MCP config:
 ## Architecture
 
 ```
-repomind index /repo
+repobrain index /repo
       |
       v
 +-----------------------------------------------------+
@@ -150,7 +150,7 @@ async with coordinator.transaction() as txn:
 ```bash
 # .env
 ANTHROPIC_API_KEY=sk-ant-...
-REPOMIND_DATA_DIR=~/.repomind
+REPOMIND_DATA_DIR=~/.repobrain
 REPOMIND_MAX_COMMITS=10000
 REPOMIND_DECAY_HALFLIFE_DAYS=180
 REPOMIND_GENERATION_CONCURRENCY=5
@@ -163,13 +163,13 @@ REPOMIND_WEBHOOK_SECRET=your-github-webhook-secret
 
 ## Documentation
 
-Full docs at **[pinexai.github.io/repomind](https://pinexai.github.io/repomind)**
+Full docs at **[pinexai.github.io/repobrain](https://pinexai.github.io/repobrain)**
 
-- [Installation & Quick Start](https://pinexai.github.io/repomind/getting-started/quickstart/)
-- [CLI Reference](https://pinexai.github.io/repomind/cli/)
-- [MCP Tools Reference](https://pinexai.github.io/repomind/mcp/overview/)
-- [Architecture Deep Dive](https://pinexai.github.io/repomind/architecture/pipeline/)
-- [repomind vs repowise](https://pinexai.github.io/repomind/comparison/)
+- [Installation & Quick Start](https://pinexai.github.io/repobrain/getting-started/quickstart/)
+- [CLI Reference](https://pinexai.github.io/repobrain/cli/)
+- [MCP Tools Reference](https://pinexai.github.io/repobrain/mcp/overview/)
+- [Architecture Deep Dive](https://pinexai.github.io/repobrain/architecture/pipeline/)
+- [repobrain vs repowise](https://pinexai.github.io/repobrain/comparison/)
 
 ---
 

@@ -1,15 +1,15 @@
 # CLI Reference
 
-repomind provides 6 CLI commands:
+repobrain provides 6 CLI commands:
 
 | Command | Description |
 |---------|-------------|
-| [`repomind index`](index-cmd.md) | Index a repository |
-| [`repomind review`](review.md) | Analyze PR blast radius |
-| [`repomind serve`](serve.md) | Start MCP + webhook servers |
-| `repomind status` | Show index health and hotspots |
-| `repomind query` | Natural language codebase search |
-| [`repomind costs`](costs.md) | Show LLM spend breakdown |
+| [`repobrain index`](index-cmd.md) | Index a repository |
+| [`repobrain review`](review.md) | Analyze PR blast radius |
+| [`repobrain serve`](serve.md) | Start MCP + webhook servers |
+| `repobrain status` | Show index health and hotspots |
+| `repobrain query` | Natural language codebase search |
+| [`repobrain costs`](costs.md) | Show LLM spend breakdown |
 
 ## Global Options
 

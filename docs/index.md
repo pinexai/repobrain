@@ -1,14 +1,14 @@
-# repomind
+# repobrain
 
 **Codebase intelligence that thinks ahead.**
 
-repomind is an MCP server for Claude that gives it deep, always-fresh understanding of your codebase — with 10× faster indexing, RAG-aware documentation, PR blast radius analysis, and temporal hotspot scoring.
+repobrain is an MCP server for Claude that gives it deep, always-fresh understanding of your codebase — with 10× faster indexing, RAG-aware documentation, PR blast radius analysis, and temporal hotspot scoring.
 
-## Why repomind?
+## Why repobrain?
 
-After analyzing repowise (the previous best-in-class codebase intelligence MCP server) in depth, we found **10 critical architectural flaws**. repomind fixes every one:
+After analyzing repowise (the previous best-in-class codebase intelligence MCP server) in depth, we found **10 critical architectural flaws**. repobrain fixes every one:
 
-| # | Repowise Flaw | repomind Fix |
+| # | Repowise Flaw | repobrain Fix |
 |---|---------------|--------------|
 | 1 | RAG context never used during generation | `RAGAwareDocGenerator` fetches dep docs from LanceDB *before* every LLM call |
 | 2 | 25+ min initial indexing | 7-stage async pipeline with `ProcessPoolExecutor` + concurrent git/parse |
@@ -18,7 +18,7 @@ After analyzing repowise (the previous best-in-class codebase intelligence MCP s
 | 6 | Incremental updates miss percentile recalculation | `upsert()` always triggers `PERCENT_RANK()` window refresh |
 | 7 | No PR blast radius analysis | `PRBlastRadiusAnalyzer` + `get_pr_impact` MCP tool |
 | 8 | Temporal blindness (old commits = recent commits) | Exponential decay scoring |
-| 9 | Zero cost visibility | `TokenspyCostAdapter` + `repomind costs` CLI |
+| 9 | Zero cost visibility | `TokenspyCostAdapter` + `repobrain costs` CLI |
 | 10 | Conservative dead code detection | Dynamic hint edge recovery |
 
 ## New Capabilities (not in repowise)
@@ -31,9 +31,9 @@ After analyzing repowise (the previous best-in-class codebase intelligence MCP s
 ## Get Started
 
 ```bash
-pip install repomind
-repomind index /path/to/your/repo
-repomind serve  # start MCP server
+pip install repobrain
+repobrain index /path/to/your/repo
+repobrain serve  # start MCP server
 ```
 
 See the [Quick Start guide](getting-started/quickstart.md) for full setup.

@@ -50,7 +50,7 @@ risk = centrality × temporal_hotspot_score × (1 + test_gap_penalty)
 
 ## Example Claude Code Usage
 
-In Claude Code with repomind as an MCP server:
+In Claude Code with repobrain as an MCP server:
 
 ```
 Use get_pr_impact for PR #42 and summarize the risk

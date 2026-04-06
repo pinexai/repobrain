@@ -1,11 +1,11 @@
-# repomind costs
+# repobrain costs
 
-Show LLM spend breakdown for all repomind operations.
+Show LLM spend breakdown for all repobrain operations.
 
 ## Usage
 
 ```bash
-repomind costs [OPTIONS]
+repobrain costs [OPTIONS]
 ```
 
 ## Options
@@ -19,7 +19,7 @@ repomind costs [OPTIONS]
 ## Example Output
 
 ```
-repomind costs --by operation
+repobrain costs --by operation
 
 OPERATION          CALLS   INPUT TOKENS   OUTPUT TOKENS   COST
 doc_generation       523      2,341,000         891,000   $4.23
@@ -32,4 +32,4 @@ TOTAL                613      2,639,000       1,007,000   $4.77
 
 ## Powered by tokenspy
 
-repomind uses [tokenspy](https://github.com/pinexai/tokenspy) to track costs. Every Anthropic call is wrapped by `TokenspyCostAdapter` which records tokens and estimated cost to the SQLite database.
+repobrain uses [tokenspy](https://github.com/pinexai/tokenspy) to track costs. Every Anthropic call is wrapped by `TokenspyCostAdapter` which records tokens and estimated cost to the SQLite database.

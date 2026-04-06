@@ -1,8 +1,8 @@
-# repomind vs. repowise
+# repobrain vs. repowise
 
 ## Feature Comparison
 
-| Feature | repowise | repomind |
+| Feature | repowise | repobrain |
 |---------|----------|----------|
 | Initial indexing time | 25+ min | ~3–5 min |
 | RAG docs use dependency context | No | Yes |
@@ -30,7 +30,7 @@ async def generate_docs(file):
     return await llm.complete(prompt)
 ```
 
-**repomind:**
+**repobrain:**
 ```python
 # Dependency docs fetched BEFORE LLM call
 async def generate(file_path, parse_result, graph):
@@ -55,7 +55,7 @@ await vector_store.save(file)
 graph_store.add_node(file)
 ```
 
-**repomind:**
+**repobrain:**
 ```python
 # Atomic — all succeed or all roll back
 async with coordinator.transaction() as txn:
@@ -72,7 +72,7 @@ async with coordinator.transaction() as txn:
 score = sum(commit.lines_changed for commit in commits)
 ```
 
-**repomind:**
+**repobrain:**
 ```python
 # Exponential decay — recent activity matters more
 for commit in commits:
@@ -83,9 +83,9 @@ for commit in commits:
 
 ## Migration from repowise
 
-repomind is a drop-in replacement. The MCP tool names are compatible. Simply:
+repobrain is a drop-in replacement. The MCP tool names are compatible. Simply:
 
-1. `pip install repomind`
-2. `repomind index /your/repo`
-3. Update your MCP server config from repowise to repomind
+1. `pip install repobrain`
+2. `repobrain index /your/repo`
+3. Update your MCP server config from repowise to repobrain
 4. Access all 12 tools (8 familiar + 4 new)
