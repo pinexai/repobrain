@@ -1,6 +1,6 @@
 /* repobrain docs — custom styles */
 
-/* asciinema player */
+/* ── asciinema player ─────────────────────────────────────── */
 .ap-wrapper {
   border-radius: 8px;
   overflow: hidden;
@@ -8,7 +8,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* terminal screenshots */
+/* ── terminal screenshots ─────────────────────────────────── */
 .screenshot {
   border-radius: 8px;
   overflow: hidden;
@@ -17,16 +17,100 @@
   max-width: 100%;
 }
 
-/* hero section on home page */
+/* ── hero section on home page ───────────────────────────── */
 .hero-banner {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   border-radius: 12px;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
   margin-bottom: 2rem;
   text-align: center;
+  border: 1px solid rgba(99, 102, 241, 0.25);
 }
 
-/* pill badges */
+.hero-banner h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0.5rem 0 0.75rem;
+  background: linear-gradient(135deg, #818cf8, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-banner p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1.25rem;
+}
+
+/* ── CTA buttons ─────────────────────────────────────────── */
+.btn-primary,
+.btn-outline {
+  display: inline-block;
+  padding: 0.55em 1.3em;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  color: #fff !important;
+}
+
+.btn-outline {
+  border: 1.5px solid rgba(99, 102, 241, 0.55);
+  color: #818cf8 !important;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── feature grid (6-card layout) ───────────────────────── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.feature-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+}
+
+.feature-card strong:first-child {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #c7d2fe;
+}
+
+/* ── comparison table win highlight ─────────────────────── */
+td.win {
+  color: #10b981;
+  font-weight: 600;
+}
+
+td.lose {
+  color: #64748b;
+}
+
+/* ── pill badges ─────────────────────────────────────────── */
 .badge {
   display: inline-block;
   padding: 0.2em 0.6em;
@@ -46,7 +130,26 @@
   color: white;
 }
 
-/* risk score colors */
+/* ── risk score colors ───────────────────────────────────── */
 .risk-high   { color: #ef4444; font-weight: bold; }
 .risk-medium { color: #f59e0b; font-weight: bold; }
 .risk-low    { color: #10b981; font-weight: bold; }
+
+/* ── language support badges ─────────────────────────────── */
+.lang-badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
+  font-size: 0.78em;
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+  margin: 0.1em;
+}
+
+/* ── admonition tweak for dark theme ─────────────────────── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-width: 4px;
+}

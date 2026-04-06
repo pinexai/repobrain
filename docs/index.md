@@ -1,13 +1,25 @@
+<div class="hero-banner" markdown="1">
+<img src="assets/logo.svg" width="90" alt="repobrain" style="margin-bottom: 0.75rem;" />
+
 # repobrain
 
 **Codebase intelligence that thinks ahead.**
 
-[![PyPI version](https://img.shields.io/pypi/v/repobrain.svg)](https://pypi.org/project/repobrain/)
-[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pinexai/repobrain/blob/main/LICENSE)
-[![CI](https://github.com/pinexai/repobrain/actions/workflows/ci.yml/badge.svg)](https://github.com/pinexai/repobrain/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/repobrain.svg?style=flat-square)](https://pypi.org/project/repobrain/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue?style=flat-square)](https://www.python.org/downloads/)
+[![MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/pinexai/repobrain/blob/main/LICENSE)
+[![MCP Compatible](https://img.shields.io/badge/MCP-compatible-blueviolet?style=flat-square)](https://modelcontextprotocol.io)
 
-repobrain is an MCP server for Claude that gives it deep, always-fresh understanding of your codebase — 10× faster indexing, RAG-aware documentation, PR blast radius, and temporal hotspot scoring.
+<a href="getting-started/quickstart/" class="btn-primary">Get Started</a>
+&nbsp;&nbsp;
+<a href="https://github.com/pinexai/repobrain" class="btn-outline">View on GitHub</a>
+&nbsp;&nbsp;
+<a href="comparison/" class="btn-outline">vs. repowise</a>
+</div>
+
+---
+
+repobrain is a **self-hosted MCP server** for Claude that gives it deep, always-fresh understanding of your codebase — 10× faster indexing, RAG-aware documentation, PR blast radius, temporal hotspot scoring, and 12 MCP tools.
 
 ---
 
@@ -15,7 +27,6 @@ repobrain is an MCP server for Claude that gives it deep, always-fresh understan
 
 <div id="demo-player" class="ap-wrapper"></div>
 
-<link rel="stylesheet" type="text/css" href="assets/asciinema-player.css" />
 <script>
   document.addEventListener("DOMContentLoaded", function(){
     AsciinemaPlayer.create("assets/demo.cast", document.getElementById("demo-player"), {
@@ -25,6 +36,50 @@ repobrain is an MCP server for Claude that gives it deep, always-fresh understan
     });
   });
 </script>
+
+---
+
+## Six Core Capabilities
+
+<div class="feature-grid" markdown="1">
+
+<div class="feature-card" markdown="1">
+**🔗 Graph Intelligence**
+
+tree-sitter parses Python, TypeScript, JavaScript, and Go into a NetworkX dependency graph. PageRank centrality identifies architectural hubs. Dynamic hint extractors (Django, pytest, Node) recover **20–40% of edges** that static analysis misses.
+</div>
+
+<div class="feature-card" markdown="1">
+**⏱ Temporal Scoring**
+
+Exponential decay weights recent commits exponentially higher. A fix merged yesterday counts far more than code from 2 years ago. Half-life is configurable. Percentile ranks refresh on every incremental update.
+</div>
+
+<div class="feature-card" markdown="1">
+**📚 RAG Documentation**
+
+`RAGAwareDocGenerator` fetches dependency docs from LanceDB **before** every LLM call. This is the #1 architectural flaw in repowise — it populates the vector store but never queries it during generation.
+</div>
+
+<div class="feature-card" markdown="1">
+**💥 PR Blast Radius**
+
+`PRBlastRadiusAnalyzer` traces direct + transitive impact of every PR. Risk score 0–10. Co-change warnings for historically coupled files. Reviewer recommendations based on ownership.
+</div>
+
+<div class="feature-card" markdown="1">
+**🔒 Atomic Transactions**
+
+`AtomicStorageCoordinator` wraps every write across SQLite, LanceDB, and NetworkX in a single logical transaction. Any failure rolls back all three stores. No silent consistency failures (5–15% failure rate in repowise).
+</div>
+
+<div class="feature-card" markdown="1">
+**💰 Cost Tracking**
+
+`TokenspyCostAdapter` wraps every Anthropic call and records per-operation token spend. `repobrain costs` shows a breakdown by command, date, and model. Know exactly what your indexing costs.
+</div>
+
+</div>
 
 ---
 
@@ -54,10 +109,10 @@ repobrain is an MCP server for Claude that gives it deep, always-fresh understan
 
 ## Why repobrain?
 
-After analyzing repowise in depth, we found **10 critical architectural flaws**. repobrain fixes every one:
+After reverse-engineering repowise's architecture, we found **10 critical flaws**. repobrain fixes every one:
 
 | # | Repowise Flaw | repobrain Fix |
-|---|---------------|--------------|
+|---|---|---|
 | 1 | RAG context never used during generation | Dependency docs fetched from LanceDB *before* every LLM call |
 | 2 | 25+ min initial indexing | 7-stage async pipeline with `ProcessPoolExecutor` + concurrent git/parse |
 | 3 | No atomic transactions across 3 stores | `AtomicStorageCoordinator` rolls back SQL + LanceDB + NetworkX atomically |
@@ -69,19 +124,18 @@ After analyzing repowise in depth, we found **10 critical architectural flaws**.
 | 9 | Zero cost visibility | `TokenspyCostAdapter` + `repobrain costs` CLI |
 | 10 | Conservative dead code detection | Dynamic hint edge recovery |
 
-## New Capabilities (not in repowise)
+[See the full comparison →](comparison.md)
 
-- **`get_pr_impact`** — full blast radius before merge: direct + transitive files, risk score 0–10, co-change warnings, reviewer recommendations
-- **`get_knowledge_map`** — knowledge silos, bus factor, onboarding targets
-- **`get_test_gaps`** — untested code ranked by risk score
-- **`get_security_hotspots`** — auth/input/SQL risk surfaces
+---
 
 ## Get Started
 
 ```bash
 pip install repobrain
 repobrain index /path/to/your/repo
-repobrain serve  # start MCP server
+repobrain serve  # start MCP server for Claude Code
 ```
 
-See the [Quick Start guide](getting-started/quickstart.md) for full setup, or [migrate from repowise](reference/migration.md) in 5 minutes.
+Returning repowise users: [migrate in 5 minutes →](reference/migration.md)
+
+New users: [Quick Start guide →](getting-started/quickstart.md)

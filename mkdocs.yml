@@ -6,6 +6,8 @@ repo_name: pinexai/repobrain
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
     - scheme: slate
       primary: indigo
@@ -35,6 +37,7 @@ theme:
 
 extra_css:
   - assets/extra.css
+  - assets/asciinema-player.css
 
 extra_javascript:
   - assets/asciinema-player.min.js
