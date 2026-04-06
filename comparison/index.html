@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
@@ -52,6 +52,8 @@
     
     
       <link rel="stylesheet" href="../assets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/asciinema-player.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -98,8 +100,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="repobrain" class="md-header__button md-logo" aria-label="repobrain" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -429,8 +430,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="repobrain" class="md-nav__button md-logo" aria-label="repobrain" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     repobrain
@@ -1643,10 +1643,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#feature-comparison" class="md-nav__link">
+  <a href="#at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Feature Comparison
+        At a Glance
       
     </span>
   </a>
@@ -1654,15 +1654,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architectural-comparison" class="md-nav__link">
+  <a href="#full-feature-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architectural Comparison
+        Full Feature Matrix
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Architectural Comparison">
+    <nav class="md-nav" aria-label="Full Feature Matrix">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1677,10 +1677,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#storage-consistency" class="md-nav__link">
+  <a href="#git-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Storage Consistency
+        Git Analysis
       
     </span>
   </a>
@@ -1688,10 +1688,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hotspot-scoring" class="md-nav__link">
+  <a href="#graph-construction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hotspot Scoring
+        Graph Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage &amp; Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; Privacy
       
     </span>
   </a>
@@ -1700,6 +1744,78 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation-generation-the-1-flaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation Generation — The #1 Flaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-consistency-silent-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Consistency — Silent Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hotspot-scoring-temporal-blindness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotspot Scoring — Temporal Blindness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licensing
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1743,7 +1859,83 @@
 
 
 <h1 id="repobrain-vs-repowise">repobrain vs. repowise<a class="headerlink" href="#repobrain-vs-repowise" title="Permanent link">&para;</a></h1>
-<h2 id="feature-comparison">Feature Comparison<a class="headerlink" href="#feature-comparison" title="Permanent link">&para;</a></h2>
+<p>A head-to-head comparison of every capability, architecture decision, and tradeoff.</p>
+<hr />
+<h2 id="at-a-glance">At a Glance<a class="headerlink" href="#at-a-glance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial indexing (1,000 files)</td>
+<td>~25 min</td>
+<td>~3–5 min</td>
+</tr>
+<tr>
+<td>Git history depth</td>
+<td>500 commits (hardcoded)</td>
+<td>10,000 (configurable)</td>
+</tr>
+<tr>
+<td>Missing import edges</td>
+<td>20–40%</td>
+<td>~0% (dynamic hints)</td>
+</tr>
+<tr>
+<td>Silent consistency failures</td>
+<td>5–15%</td>
+<td>0% (atomic transactions)</td>
+</tr>
+<tr>
+<td>MCP tools</td>
+<td>8</td>
+<td><strong>12</strong></td>
+</tr>
+<tr>
+<td>CLI commands</td>
+<td>4</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>Temporal scoring</td>
+<td>❌</td>
+<td>✅ exponential decay</td>
+</tr>
+<tr>
+<td>PR blast radius</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>LLM cost tracking</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>License</td>
+<td>AGPL-3.0</td>
+<td><strong>MIT</strong></td>
+</tr>
+<tr>
+<td>Self-hosted</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RAG used during generation</td>
+<td>❌</td>
+<td><strong>✅</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="full-feature-matrix">Full Feature Matrix<a class="headerlink" href="#full-feature-matrix" title="Permanent link">&para;</a></h2>
+<h3 id="documentation-generation">Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1754,127 +1946,497 @@
 </thead>
 <tbody>
 <tr>
-<td>Initial indexing time</td>
-<td>25+ min</td>
-<td>~3–5 min</td>
+<td>Generates file-level docs</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>RAG docs use dependency context</td>
-<td>No</td>
-<td>Yes</td>
+<td>Generates symbol-level docs</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Atomic transactions (3 stores)</td>
-<td>No</td>
-<td>Yes</td>
+<td>Fetches dependency context before generation</td>
+<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Git commit limit</td>
+<td>Includes centrality score in prompt</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Includes hotspot score in prompt</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Freshness / staleness tracking</td>
+<td>Basic</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Semantic search over generated docs</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-analysis">Git Analysis<a class="headerlink" href="#git-analysis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commit history depth</td>
 <td>500 (hardcoded)</td>
 <td>10,000 (configurable)</td>
 </tr>
 <tr>
-<td>Dynamic import edges (Django/pytest/Node)</td>
-<td>No</td>
-<td>Yes</td>
+<td>Hotspot scoring</td>
+<td>Linear count</td>
+<td><strong>Exponential decay</strong></td>
 </tr>
 <tr>
-<td>Global percentile rank refresh on incremental</td>
-<td>No</td>
-<td>Yes</td>
+<td>Co-change analysis</td>
+<td>✅</td>
+<td>✅ temporal-weighted</td>
 </tr>
 <tr>
-<td>PR blast radius analysis</td>
-<td>No</td>
-<td>Yes</td>
+<td>Ownership calculation</td>
+<td>✅</td>
+<td>✅ temporal-weighted</td>
 </tr>
 <tr>
-<td>Temporal decay scoring</td>
-<td>No</td>
-<td>Yes</td>
+<td>Architectural decision capture</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>LLM cost visibility</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Dead code sensitivity (configurable)</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>MCP tools</td>
-<td>8</td>
-<td>12</td>
-</tr>
-<tr>
-<td>CLI commands</td>
-<td>4</td>
-<td>6</td>
-</tr>
-<tr>
-<td>GitHub webhook auto-index</td>
-<td>Partial</td>
-<td>Full (HMAC-SHA256)</td>
+<td>Percentile rank refresh on incremental update</td>
+<td>❌</td>
+<td>✅</td>
 </tr>
 </tbody>
 </table>
-<h2 id="architectural-comparison">Architectural Comparison<a class="headerlink" href="#architectural-comparison" title="Permanent link">&para;</a></h2>
-<h3 id="documentation-generation">Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permanent link">&para;</a></h3>
-<p><strong>repowise:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Vector store populated but never queried during generation</span>
+<h3 id="graph-construction">Graph Construction<a class="headerlink" href="#graph-construction" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python parsing</td>
+<td>✅ tree-sitter</td>
+<td>✅ tree-sitter</td>
+</tr>
+<tr>
+<td>TypeScript parsing</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Go parsing</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>JavaScript parsing</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Django dynamic imports</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>pytest fixture imports</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Node.js require() patterns</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PageRank centrality</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Transitive dependency traversal</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-reliability">Storage &amp; Reliability<a class="headerlink" href="#storage-reliability" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL store (SQLite)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Vector store (LanceDB)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Graph store (NetworkX)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Atomic transactions across all 3</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rollback on partial failure</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Consistency failure rate</td>
+<td>5–15%</td>
+<td>~0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mcp-tools">MCP Tools<a class="headerlink" href="#mcp-tools" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>repowise</th>
+<th>repobrain</th>
+<th>Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>explain_file</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>RAG-injected dependency context</td>
+</tr>
+<tr>
+<td><code>explain_symbol</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>get_hotspots</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Temporal decay scoring</td>
+</tr>
+<tr>
+<td><code>get_ownership</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Temporal-weighted</td>
+</tr>
+<tr>
+<td><code>get_dependencies</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Dynamic hint edges included</td>
+</tr>
+<tr>
+<td><code>get_architectural_decisions</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>search_codebase</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>get_cochange_patterns</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Temporal-weighted</td>
+</tr>
+<tr>
+<td><code>get_pr_impact</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>get_knowledge_map</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>get_test_gaps</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>get_security_hotspots</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli">CLI<a class="headerlink" href="#cli" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code> / <code>init</code></td>
+<td>✅</td>
+<td>✅ faster</td>
+</tr>
+<tr>
+<td><code>serve</code></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>query</code></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>review &lt;PR&gt;</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+</tr>
+<tr>
+<td><code>costs</code></td>
+<td>❌</td>
+<td><strong>✅ NEW</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-privacy">Security &amp; Privacy<a class="headerlink" href="#security-privacy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-hosted</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Code stays local</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>BYOK (bring your own API key)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>No telemetry</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>GitHub webhook HMAC-SHA256 validation</td>
+<td>Partial</td>
+<td><strong>Full</strong></td>
+</tr>
+<tr>
+<td>License</td>
+<td>AGPL-3.0</td>
+<td><strong>MIT</strong></td>
+</tr>
+<tr>
+<td>Commercial use without license fee</td>
+<td>❌ (AGPL)</td>
+<td><strong>✅ (MIT)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="architecture-comparison">Architecture Comparison<a class="headerlink" href="#architecture-comparison" title="Permanent link">&para;</a></h2>
+<h3 id="documentation-generation-the-1-flaw">Documentation Generation — The #1 Flaw<a class="headerlink" href="#documentation-generation-the-1-flaw" title="Permanent link">&para;</a></h3>
+<p><strong>repowise</strong> populates a vector store during indexing but <strong>never queries it</strong> when generating documentation. Each file's docs are generated with no knowledge of its dependencies.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># repowise (simplified)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">generate_docs</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Document this file:</span><span class="se">\n</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="k">await</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>repobrain:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Dependency docs fetched BEFORE LLM call</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="k">await</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>  <span class="c1"># no dependency context</span>
+</code></pre></div>
+<p><strong>repobrain</strong> fetches dependency documentation from LanceDB <em>before</em> every LLM call:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># repobrain</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">parse_result</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">dep_paths</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_direct_dependencies</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">dep_contexts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">retriever</span><span class="o">.</span><span class="n">get_docs</span><span class="p">(</span><span class="n">dep_paths</span><span class="p">)</span>  <span class="c1"># &lt;- THE FIX</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">dep_contexts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">retriever</span><span class="o">.</span><span class="n">get_docs</span><span class="p">(</span><span class="n">dep_paths</span><span class="p">)</span>  <span class="c1"># ← the fix</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">prompt</span> <span class="o">=</span> <span class="n">build_prompt</span><span class="p">(</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="n">file_content</span><span class="o">=...</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">dependency_contexts</span><span class="o">=</span><span class="n">dep_contexts</span><span class="p">,</span>  <span class="c1"># actual dep docs included</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">centrality</span><span class="o">=...</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">hotspot_score</span><span class="o">=...</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="n">file_content</span><span class="o">=</span><span class="n">parse_result</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">dependency_contexts</span><span class="o">=</span><span class="n">dep_contexts</span><span class="p">,</span>   <span class="c1"># actual dep docs included</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">centrality</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">get_centrality</span><span class="p">(</span><span class="n">file_path</span><span class="p">),</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">hotspot_score</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="n">file_path</span><span class="p">),</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">)</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="k">return</span> <span class="k">await</span> <span class="n">llm</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-</code></pre></div></p>
-<h3 id="storage-consistency">Storage Consistency<a class="headerlink" href="#storage-consistency" title="Permanent link">&para;</a></h3>
-<p><strong>repowise:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Three independent writes — any can fail silently</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">await</span> <span class="n">sql_store</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">await</span> <span class="n">vector_store</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">graph_store</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>repobrain:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Atomic — all succeed or all roll back</span>
+</code></pre></div>
+<h3 id="storage-consistency-silent-failures">Storage Consistency — Silent Failures<a class="headerlink" href="#storage-consistency-silent-failures" title="Permanent link">&para;</a></h3>
+<p><strong>repowise</strong> writes to three independent stores with no coordination. Any write can fail silently, leaving indexes in an inconsistent state (5–15% failure rate under load).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># repowise — three independent writes</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">await</span> <span class="n">sql_store</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file_record</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">await</span> <span class="n">vector_store</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">graph_store</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>   <span class="c1"># if this crashes, SQL and vector are already written</span>
+</code></pre></div>
+<p><strong>repobrain</strong> wraps all three in an atomic transaction — all succeed or all roll back:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># repobrain — atomic across all 3 stores</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">async</span> <span class="k">with</span> <span class="n">coordinator</span><span class="o">.</span><span class="n">transaction</span><span class="p">()</span> <span class="k">as</span> <span class="n">txn</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_sql_calls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_vector_records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-</code></pre></div></p>
-<h3 id="hotspot-scoring">Hotspot Scoring<a class="headerlink" href="#hotspot-scoring" title="Permanent link">&para;</a></h3>
-<p><strong>repowise:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># All commits equally weighted — 3-year-old commits same as yesterday&#39;s</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">lines_changed</span> <span class="k">for</span> <span class="n">commit</span> <span class="ow">in</span> <span class="n">commits</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>repobrain:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Exponential decay — recent activity matters more</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">for</span> <span class="n">commit</span> <span class="ow">in</span> <span class="n">commits</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">age_days</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">commit</span><span class="o">.</span><span class="n">authored_date</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">decay</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">ln</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">age_days</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">score</span> <span class="o">+=</span> <span class="n">decay</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">lines_changed</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
-</code></pre></div></p>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_sql_calls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">sql</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file_record</span><span class="p">))</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_vector_records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># On any exception: SQL rollback + vector delete + graph node removal</span>
+</code></pre></div>
+<h3 id="hotspot-scoring-temporal-blindness">Hotspot Scoring — Temporal Blindness<a class="headerlink" href="#hotspot-scoring-temporal-blindness" title="Permanent link">&para;</a></h3>
+<p><strong>repowise</strong> treats a commit from 3 years ago the same as a commit from yesterday:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># repowise — linear accumulation</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">lines_changed</span> <span class="k">for</span> <span class="n">commit</span> <span class="ow">in</span> <span class="n">commits</span><span class="p">[</span><span class="o">-</span><span class="mi">500</span><span class="p">:])</span>
+</code></pre></div>
+<p><strong>repobrain</strong> applies exponential decay so recent activity dominates:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># repobrain — temporal decay</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">log</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">for</span> <span class="n">commit</span> <span class="ow">in</span> <span class="n">commits</span><span class="p">:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">age_days</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">commit</span><span class="o">.</span><span class="n">authored_date</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">decay</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">age_days</span> <span class="o">/</span> <span class="n">halflife_days</span><span class="p">)</span>   <span class="c1"># halflife default: 180 days</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">normalized</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">lines_changed</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>  <span class="c1"># cap outliers</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">score</span> <span class="o">+=</span> <span class="n">decay</span> <span class="o">*</span> <span class="n">normalized</span>
+</code></pre></div>
+<hr />
+<h2 id="performance-comparison">Performance Comparison<a class="headerlink" href="#performance-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>repowise</th>
+<th>repobrain</th>
+<th>Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,000-file Python repo — first index</td>
+<td>~25 min</td>
+<td>~3–5 min</td>
+<td><strong>5–8× faster</strong></td>
+</tr>
+<tr>
+<td>1,000-file repo — incremental update (50 files)</td>
+<td>~3 min</td>
+<td>~30 sec</td>
+<td><strong>6× faster</strong></td>
+</tr>
+<tr>
+<td>Embedding concurrency</td>
+<td>Sequential</td>
+<td>ThreadPoolExecutor + semaphore</td>
+<td>parallel</td>
+</tr>
+<tr>
+<td>Parse stage</td>
+<td>Single process</td>
+<td>ProcessPoolExecutor (multi-core)</td>
+<td>CPU-bound speedup</td>
+</tr>
+<tr>
+<td>Git + parse stages</td>
+<td>Sequential</td>
+<td><code>asyncio.gather</code> (concurrent)</td>
+<td>concurrent</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="licensing">Licensing<a class="headerlink" href="#licensing" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>repowise</th>
+<th>repobrain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>License</td>
+<td>AGPL-3.0</td>
+<td><strong>MIT</strong></td>
+</tr>
+<tr>
+<td>Commercial use</td>
+<td>Requires commercial license</td>
+<td>Free — no restrictions</td>
+</tr>
+<tr>
+<td>Modify and redistribute</td>
+<td>Must open-source changes</td>
+<td>No requirement</td>
+</tr>
+<tr>
+<td>SaaS / hosted deployment</td>
+<td>Requires commercial license</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Free (open-source) + paid plans</td>
+<td>Free — MIT forever</td>
+</tr>
+</tbody>
+</table>
+<p><strong>repowise is AGPL-3.0</strong> — if you deploy it in a commercial product or SaaS, the AGPL requires you to release your entire application under AGPL or purchase a commercial license from repowise-dev.</p>
+<p><strong>repobrain is MIT</strong> — use it commercially, integrate it into proprietary software, deploy it as a SaaS. No license fees, no restrictions.</p>
+<hr />
 <h2 id="migration-from-repowise">Migration from repowise<a class="headerlink" href="#migration-from-repowise" title="Permanent link">&para;</a></h2>
-<p>repobrain is a drop-in replacement. The MCP tool names are compatible. Simply:</p>
-<ol>
-<li><code>pip install repobrain</code></li>
-<li><code>repobrain index /your/repo</code></li>
-<li>Update your MCP server config from repowise to repobrain</li>
-<li>Access all 12 tools (8 familiar + 4 new)</li>
-</ol>
+<p>repobrain is API-compatible with repowise. All 8 repowise MCP tool names work unchanged. Migration takes under 5 minutes.</p>
+<p><a href="../reference/migration/">See the Migration Guide →</a></p>
 
 
 
