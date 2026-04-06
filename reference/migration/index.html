@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://pinexai.github.io/repobrain/cli/review/">
+        <link rel="canonical" href="https://pinexai.github.io/repobrain/reference/migration/">
       
       
-        <link rel="prev" href="../index-cmd/">
+        <link rel="prev" href="../api/">
       
       
-        <link rel="next" href="../serve/">
+        <link rel="next" href="../contributing/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>repobrain review - repobrain</title>
+        <title>Migration from repowise - repobrain</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repobrain-review" class="md-skip">
+        <a href="#migrating-from-repowise" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              repobrain review
+              Migration from repowise
             
           </span>
         </div>
@@ -268,13 +268,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../cli/" class="md-tabs__link">
           
   
   
@@ -350,11 +348,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../reference/api/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../api/" class="md-tabs__link">
           
   
   
@@ -628,31 +628,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -670,7 +667,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -688,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   
@@ -716,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index-cmd/" class="md-nav__link">
+      <a href="../../cli/index-cmd/" class="md-nav__link">
         
   
   
@@ -741,37 +738,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    repobrain review
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cli/review/" class="md-nav__link">
         
   
   
@@ -787,70 +757,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#risk-score-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Risk Score Formula
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -863,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../serve/" class="md-nav__link">
+      <a href="../../cli/serve/" class="md-nav__link">
         
   
   
@@ -891,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../costs/" class="md-nav__link">
+      <a href="../../cli/costs/" class="md-nav__link">
         
   
   
@@ -1386,28 +1292,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1425,7 +1334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1443,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
@@ -1468,10 +1377,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../reference/migration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration from repowise
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1487,6 +1423,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-repobrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Install repobrain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-index-your-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Index your repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-update-your-mcp-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Update your MCP config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-tools-are-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Verify tools are available
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-name-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Name Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variable-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variable Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-keep-using-repowise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can I keep using repowise?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-delete-repowises-data-after-migrating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can I delete repowise's data after migrating?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1499,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   
@@ -1527,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         
   
   
@@ -1719,65 +1763,161 @@
   
 
 
-<h1 id="repobrain-review">repobrain review<a class="headerlink" href="#repobrain-review" title="Permanent link">&para;</a></h1>
-<p>Analyze the blast radius and risk score of a pull request.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>repobrain<span class="w"> </span>review<span class="w"> </span>&lt;PR_NUMBER_OR_BRANCH&gt;<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+<h1 id="migrating-from-repowise">Migrating from repowise<a class="headerlink" href="#migrating-from-repowise" title="Permanent link">&para;</a></h1>
+<p>repobrain is a drop-in replacement for repowise. Migration takes under 5 minutes.</p>
+<h2 id="step-1-install-repobrain">Step 1 — Install repobrain<a class="headerlink" href="#step-1-install-repobrain" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>repobrain
 </code></pre></div>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<p>You can keep repowise installed — they don't conflict.</p>
+<h2 id="step-2-index-your-repository">Step 2 — Index your repository<a class="headerlink" href="#step-2-index-your-repository" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>repobrain<span class="w"> </span>index<span class="w"> </span>/path/to/your/repo
+</code></pre></div>
+<p>repobrain builds its own index (separate from repowise's). The first run takes 3–5 minutes for a 1,000-file repo.</p>
+<h2 id="step-3-update-your-mcp-config">Step 3 — Update your MCP config<a class="headerlink" href="#step-3-update-your-mcp-config" title="Permanent link">&para;</a></h2>
+<p><strong>Before (repowise):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;repowise&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;repowise&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;serve&quot;</span><span class="p">]</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>After (repobrain):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;repobrain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;repobrain&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;serve&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--mcp-only&quot;</span><span class="p">]</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</code></pre></div></p>
+<h2 id="step-4-verify-tools-are-available">Step 4 — Verify tools are available<a class="headerlink" href="#step-4-verify-tools-are-available" title="Permanent link">&para;</a></h2>
+<p>In Claude Code, type:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>List available MCP tools
+</code></pre></div></p>
+<p>You should see all 12 repobrain tools.</p>
+<hr />
+<h2 id="tool-name-mapping">Tool Name Mapping<a class="headerlink" href="#tool-name-mapping" title="Permanent link">&para;</a></h2>
+<p>All repowise tool names work in repobrain. The 4 new tools are additive.</p>
 <table>
 <thead>
 <tr>
-<th>Option</th>
-<th>Default</th>
-<th>Description</th>
+<th>repowise tool</th>
+<th>repobrain equivalent</th>
+<th>Improvements</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--format</code></td>
-<td><code>table</code></td>
-<td>Output format: <code>table</code>, <code>json</code>, <code>markdown</code></td>
+<td><code>explain_file</code></td>
+<td><code>explain_file</code></td>
+<td>RAG-injected dependency context</td>
 </tr>
 <tr>
-<td><code>--max-depth N</code></td>
-<td><code>3</code></td>
-<td>Transitive dependency traversal depth</td>
+<td><code>explain_symbol</code></td>
+<td><code>explain_symbol</code></td>
+<td>Same</td>
 </tr>
 <tr>
-<td><code>--no-transitive</code></td>
-<td>—</td>
-<td>Only show direct changed files</td>
+<td><code>get_hotspots</code></td>
+<td><code>get_hotspots</code></td>
+<td>Temporal decay scoring</td>
+</tr>
+<tr>
+<td><code>get_ownership</code></td>
+<td><code>get_ownership</code></td>
+<td>Temporal-weighted</td>
+</tr>
+<tr>
+<td><code>get_dependencies</code></td>
+<td><code>get_dependencies</code></td>
+<td>Dynamic import edges</td>
+</tr>
+<tr>
+<td><code>get_architectural_decisions</code></td>
+<td><code>get_architectural_decisions</code></td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>search_codebase</code></td>
+<td><code>search_codebase</code></td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>get_cochange_patterns</code></td>
+<td><code>get_cochange_patterns</code></td>
+<td>Temporal-weighted</td>
+</tr>
+<tr>
+<td><em>(not in repowise)</em></td>
+<td><code>get_pr_impact</code></td>
+<td><strong>NEW</strong></td>
+</tr>
+<tr>
+<td><em>(not in repowise)</em></td>
+<td><code>get_knowledge_map</code></td>
+<td><strong>NEW</strong></td>
+</tr>
+<tr>
+<td><em>(not in repowise)</em></td>
+<td><code>get_test_gaps</code></td>
+<td><strong>NEW</strong></td>
+</tr>
+<tr>
+<td><em>(not in repowise)</em></td>
+<td><code>get_security_hotspots</code></td>
+<td><strong>NEW</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PR #42 — Add user authentication
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DIRECT FILES (3)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  src/auth/login.py          risk: 8.2  centrality: 0.71  owner: alice@co.com
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  src/auth/tokens.py         risk: 7.4  centrality: 0.65  owner: alice@co.com
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  src/models/user.py         risk: 6.1  centrality: 0.58  owner: bob@co.com
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>TRANSITIVE DEPENDENTS (12)
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  src/api/endpoints.py       risk: 5.3  (imports src/auth/login.py)
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  src/tests/test_login.py    risk: 2.1  (imports src/auth/login.py)
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  ...
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>CO-CHANGE WARNINGS
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  src/auth/middleware.py is historically changed with src/auth/login.py (72% co-change)
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  — but is NOT in this PR. Review recommended.
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>RECOMMENDED REVIEWERS
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  alice@co.com  (owns 2/3 direct files)
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  bob@co.com    (owns 1/3 direct files, 8/12 transitive files)
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>OVERALL RISK SCORE: 7.8 / 10.0  [HIGH]
+<hr />
+<h2 id="environment-variable-mapping">Environment Variable Mapping<a class="headerlink" href="#environment-variable-mapping" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>repowise</th>
+<th>repobrain</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ANTHROPIC_API_KEY</code></td>
+<td><code>ANTHROPIC_API_KEY</code></td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>REPOWISE_MAX_COMMITS</code></td>
+<td><code>REPOMIND_MAX_COMMITS</code></td>
+<td>Default raised to 10,000</td>
+</tr>
+<tr>
+<td><code>REPOWISE_DATA_DIR</code></td>
+<td><code>REPOMIND_DATA_DIR</code></td>
+<td>New location</td>
+</tr>
+<tr>
+<td><em>(none)</em></td>
+<td><code>REPOMIND_DECAY_HALFLIFE_DAYS</code></td>
+<td>New: temporal decay</td>
+</tr>
+<tr>
+<td><em>(none)</em></td>
+<td><code>REPOMIND_GENERATION_CONCURRENCY</code></td>
+<td>New: parallel generation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="can-i-keep-using-repowise">Can I keep using repowise?<a class="headerlink" href="#can-i-keep-using-repowise" title="Permanent link">&para;</a></h2>
+<p>Yes. repobrain does not modify or delete repowise's data. Run both in parallel while evaluating.</p>
+<h2 id="can-i-delete-repowises-data-after-migrating">Can I delete repowise's data after migrating?<a class="headerlink" href="#can-i-delete-repowises-data-after-migrating" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>~/.repowise/<span class="w">   </span><span class="c1"># default repowise data dir</span>
 </code></pre></div>
-<h2 id="risk-score-formula">Risk Score Formula<a class="headerlink" href="#risk-score-formula" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>risk = centrality × temporal_hotspot × (1 + test_gap_score)
-</code></pre></div>
-<p>Normalized to 0–10 across the repository.</p>
+<p>Only do this after confirming repobrain is working correctly.</p>
 
 
 

@@ -45,6 +45,14 @@
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
+         <loc>https://pinexai.github.io/repobrain/deployment/docker/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/deployment/production/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
          <loc>https://pinexai.github.io/repobrain/getting-started/configuration/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
@@ -74,6 +82,30 @@
     </url>
     <url>
          <loc>https://pinexai.github.io/repobrain/mcp/test-gaps/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/reference/api/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/reference/changelog/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/reference/contributing/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/reference/migration/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/support/faq/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://pinexai.github.io/repobrain/support/troubleshooting/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
 </urlset>

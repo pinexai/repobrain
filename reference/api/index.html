@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://pinexai.github.io/repobrain/cli/review/">
+        <link rel="canonical" href="https://pinexai.github.io/repobrain/reference/api/">
       
       
-        <link rel="prev" href="../index-cmd/">
+        <link rel="prev" href="../../deployment/production/">
       
       
-        <link rel="next" href="../serve/">
+        <link rel="next" href="../migration/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>repobrain review - repobrain</title>
+        <title>Python API - repobrain</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repobrain-review" class="md-skip">
+        <a href="#api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              repobrain review
+              Python API
             
           </span>
         </div>
@@ -268,13 +268,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../cli/" class="md-tabs__link">
           
   
   
@@ -350,11 +348,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../reference/api/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -628,31 +628,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -670,7 +667,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -688,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   
@@ -716,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index-cmd/" class="md-nav__link">
+      <a href="../../cli/index-cmd/" class="md-nav__link">
         
   
   
@@ -741,37 +738,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    repobrain review
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cli/review/" class="md-nav__link">
         
   
   
@@ -787,70 +757,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Options
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#risk-score-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Risk Score Formula
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -863,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../serve/" class="md-nav__link">
+      <a href="../../cli/serve/" class="md-nav__link">
         
   
   
@@ -891,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../costs/" class="md-nav__link">
+      <a href="../../cli/costs/" class="md-nav__link">
         
   
   
@@ -1386,28 +1292,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1425,7 +1334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1440,10 +1349,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../reference/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1459,6 +1395,181 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asyncindexingpipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AsyncIndexingPipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atomicstoragecoordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AtomicStorageCoordinator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prblastradiusanalyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRBlastRadiusAnalyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GraphStore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporalmetricscalculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TemporalMetricsCalculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repomindconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RepomindConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLMConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexingconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IndexingConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcpconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCPConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WebhookConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1471,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/migration/" class="md-nav__link">
+      <a href="../migration/" class="md-nav__link">
         
   
   
@@ -1499,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   
@@ -1527,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         
   
   
@@ -1719,65 +1830,250 @@
   
 
 
-<h1 id="repobrain-review">repobrain review<a class="headerlink" href="#repobrain-review" title="Permanent link">&para;</a></h1>
-<p>Analyze the blast radius and risk score of a pull request.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>repobrain<span class="w"> </span>review<span class="w"> </span>&lt;PR_NUMBER_OR_BRANCH&gt;<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<h2 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h2>
+<p>repobrain can be used as a library — not just a CLI.</p>
+<h3 id="asyncindexingpipeline">AsyncIndexingPipeline<a class="headerlink" href="#asyncindexingpipeline" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.core.indexer</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncIndexingPipeline</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.config.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">RepomindConfig</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">config</span> <span class="o">=</span> <span class="n">RepomindConfig</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">AsyncIndexingPipeline</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">repo_path</span><span class="o">=</span><span class="s2">&quot;/path/to/repo&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="n">incremental</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">generate_docs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">)</span>
 </code></pre></div>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h3 id="atomicstoragecoordinator">AtomicStorageCoordinator<a class="headerlink" href="#atomicstoragecoordinator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.core.coordinator</span><span class="w"> </span><span class="kn">import</span> <span class="n">AtomicStorageCoordinator</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.storage.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncSQLiteDB</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.storage.vector</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanceDBStore</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.storage.graph</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphStore</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">db</span> <span class="o">=</span> <span class="n">AsyncSQLiteDB</span><span class="p">(</span><span class="s2">&quot;~/.repomind/repo.db&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">vector</span> <span class="o">=</span> <span class="n">LanceDBStore</span><span class="p">(</span><span class="s2">&quot;~/.repomind/vectors&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">GraphStore</span><span class="p">(</span><span class="s2">&quot;~/.repomind/graph.graphml&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">await</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">await</span> <span class="n">vector</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">coord</span> <span class="o">=</span> <span class="n">AtomicStorageCoordinator</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">graph</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">async</span> <span class="k">with</span> <span class="n">coord</span><span class="o">.</span><span class="n">transaction</span><span class="p">()</span> <span class="k">as</span> <span class="n">txn</span><span class="p">:</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;src/main.py&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">}))</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">txn</span><span class="o">.</span><span class="n">pending_edges</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;src/main.py&quot;</span><span class="p">,</span> <span class="s2">&quot;src/utils.py&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;imports&quot;</span><span class="p">}))</span>
+</code></pre></div>
+<h3 id="prblastradiusanalyzer">PRBlastRadiusAnalyzer<a class="headerlink" href="#prblastradiusanalyzer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.git.pr_analyzer</span><span class="w"> </span><span class="kn">import</span> <span class="n">PRBlastRadiusAnalyzer</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">analyzer</span> <span class="o">=</span> <span class="n">PRBlastRadiusAnalyzer</span><span class="p">(</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">graph_store</span><span class="o">=</span><span class="n">graph</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">db</span><span class="o">=</span><span class="n">db</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">repo_id</span><span class="o">=</span><span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">report</span> <span class="o">=</span> <span class="k">await</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">analyze_files</span><span class="p">(</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">changed_files</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;src/auth/login.py&quot;</span><span class="p">,</span> <span class="s2">&quot;src/auth/tokens.py&quot;</span><span class="p">],</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">pr_title</span><span class="o">=</span><span class="s2">&quot;Add OAuth2 login&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Risk score: </span><span class="si">{</span><span class="n">report</span><span class="o">.</span><span class="n">overall_risk_score</span><span class="si">}</span><span class="s2">/10&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">report</span><span class="o">.</span><span class="n">transitive_files</span><span class="p">:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">file_path</span><span class="si">}</span><span class="s2">  risk=</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">risk_score</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="graphstore">GraphStore<a class="headerlink" href="#graphstore" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.storage.graph</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphStore</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">g</span> <span class="o">=</span> <span class="n">GraphStore</span><span class="p">(</span><span class="s2">&quot;graph.graphml&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;src/main.py&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="n">centrality</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">g</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s2">&quot;src/main.py&quot;</span><span class="p">,</span> <span class="s2">&quot;src/utils.py&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;imports&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Queries</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">ancestors</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="s2">&quot;src/utils.py&quot;</span><span class="p">)</span>   <span class="c1"># all files that depend on utils.py</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">pr</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">pagerank</span><span class="p">()</span>                          <span class="c1"># centrality scores</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">dead</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find_dead_code</span><span class="p">([</span><span class="s2">&quot;src/main.py&quot;</span><span class="p">])</span>  <span class="c1"># unreachable from entry points</span>
+</code></pre></div>
+<h3 id="temporalmetricscalculator">TemporalMetricsCalculator<a class="headerlink" href="#temporalmetricscalculator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">repomind.git.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">TemporalMetricsCalculator</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">calc</span> <span class="o">=</span> <span class="n">TemporalMetricsCalculator</span><span class="p">(</span><span class="n">halflife_days</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">score</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">commits</span><span class="p">)</span>  <span class="c1"># list of GitCommit objects</span>
+</code></pre></div>
+<hr />
+<h2 id="configuration-reference">Configuration Reference<a class="headerlink" href="#configuration-reference" title="Permanent link">&para;</a></h2>
+<p>All settings via <code>pydantic-settings</code> — set as env vars or in <code>.env</code>.</p>
+<h3 id="repomindconfig">RepomindConfig<a class="headerlink" href="#repomindconfig" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Option</th>
+<th>Field</th>
+<th>Type</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--format</code></td>
-<td><code>table</code></td>
-<td>Output format: <code>table</code>, <code>json</code>, <code>markdown</code></td>
+<td><code>data_dir</code></td>
+<td>Path</td>
+<td><code>~/.repomind</code></td>
+<td>Index storage root</td>
 </tr>
 <tr>
-<td><code>--max-depth N</code></td>
-<td><code>3</code></td>
-<td>Transitive dependency traversal depth</td>
-</tr>
-<tr>
-<td><code>--no-transitive</code></td>
-<td>—</td>
-<td>Only show direct changed files</td>
+<td><code>log_level</code></td>
+<td>str</td>
+<td><code>INFO</code></td>
+<td>Logging level</td>
 </tr>
 </tbody>
 </table>
-<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PR #42 — Add user authentication
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DIRECT FILES (3)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  src/auth/login.py          risk: 8.2  centrality: 0.71  owner: alice@co.com
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  src/auth/tokens.py         risk: 7.4  centrality: 0.65  owner: alice@co.com
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  src/models/user.py         risk: 6.1  centrality: 0.58  owner: bob@co.com
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>TRANSITIVE DEPENDENTS (12)
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  src/api/endpoints.py       risk: 5.3  (imports src/auth/login.py)
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  src/tests/test_login.py    risk: 2.1  (imports src/auth/login.py)
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  ...
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>CO-CHANGE WARNINGS
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  src/auth/middleware.py is historically changed with src/auth/login.py (72% co-change)
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  — but is NOT in this PR. Review recommended.
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>RECOMMENDED REVIEWERS
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  alice@co.com  (owns 2/3 direct files)
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  bob@co.com    (owns 1/3 direct files, 8/12 transitive files)
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>OVERALL RISK SCORE: 7.8 / 10.0  [HIGH]
-</code></pre></div>
-<h2 id="risk-score-formula">Risk Score Formula<a class="headerlink" href="#risk-score-formula" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>risk = centrality × temporal_hotspot × (1 + test_gap_score)
-</code></pre></div>
-<p>Normalized to 0–10 across the repository.</p>
+<h3 id="gitconfig">GitConfig<a class="headerlink" href="#gitconfig" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_commits</code></td>
+<td>int</td>
+<td><code>10000</code></td>
+<td>Max commits to analyze</td>
+</tr>
+<tr>
+<td><code>decay_halflife_days</code></td>
+<td>float</td>
+<td><code>180.0</code></td>
+<td>Temporal decay halflife</td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>str</td>
+<td><code>None</code></td>
+<td>Git branch (default: current)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="llmconfig">LLMConfig<a class="headerlink" href="#llmconfig" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td>str</td>
+<td><code>claude-sonnet-4-6</code></td>
+<td>Anthropic model ID</td>
+</tr>
+<tr>
+<td><code>max_tokens</code></td>
+<td>int</td>
+<td><code>2048</code></td>
+<td>Max tokens per doc generation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="indexingconfig">IndexingConfig<a class="headerlink" href="#indexingconfig" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generation_concurrency</code></td>
+<td>int</td>
+<td><code>5</code></td>
+<td>Max concurrent LLM calls</td>
+</tr>
+<tr>
+<td><code>embedding_concurrency</code></td>
+<td>int</td>
+<td><code>10</code></td>
+<td>Max concurrent embedding calls</td>
+</tr>
+<tr>
+<td><code>max_file_size_kb</code></td>
+<td>int</td>
+<td><code>500</code></td>
+<td>Skip files larger than this</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mcpconfig">MCPConfig<a class="headerlink" href="#mcpconfig" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>port</code></td>
+<td>int</td>
+<td><code>8766</code></td>
+<td>MCP server port</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td>str</td>
+<td><code>127.0.0.1</code></td>
+<td>Bind address</td>
+</tr>
+</tbody>
+</table>
+<h3 id="webhookconfig">WebhookConfig<a class="headerlink" href="#webhookconfig" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>port</code></td>
+<td>int</td>
+<td><code>8765</code></td>
+<td>Webhook server port</td>
+</tr>
+<tr>
+<td><code>secret</code></td>
+<td>str</td>
+<td><code>None</code></td>
+<td>HMAC-SHA256 secret</td>
+</tr>
+<tr>
+<td><code>github_token</code></td>
+<td>str</td>
+<td><code>None</code></td>
+<td>Token for posting PR comments</td>
+</tr>
+</tbody>
+</table>
 
 
 
