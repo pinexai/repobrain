@@ -2,15 +2,63 @@
 
 **Codebase intelligence that thinks ahead.**
 
-repobrain is an MCP server for Claude that gives it deep, always-fresh understanding of your codebase — with 10× faster indexing, RAG-aware documentation, PR blast radius analysis, and temporal hotspot scoring.
+[![PyPI version](https://img.shields.io/pypi/v/repobrain.svg)](https://pypi.org/project/repobrain/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pinexai/repobrain/blob/main/LICENSE)
+[![CI](https://github.com/pinexai/repobrain/actions/workflows/ci.yml/badge.svg)](https://github.com/pinexai/repobrain/actions/workflows/ci.yml)
+
+repobrain is an MCP server for Claude that gives it deep, always-fresh understanding of your codebase — 10× faster indexing, RAG-aware documentation, PR blast radius, and temporal hotspot scoring.
+
+---
+
+## Live Demo
+
+<div id="demo-player" class="ap-wrapper"></div>
+
+<link rel="stylesheet" type="text/css" href="assets/asciinema-player.css" />
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    AsciinemaPlayer.create("assets/demo.cast", document.getElementById("demo-player"), {
+      cols: 120, rows: 35, autoPlay: true, loop: true, speed: 1.5,
+      theme: "monokai", fit: "width",
+      terminalFontFamily: "'JetBrains Mono', 'Fira Code', monospace"
+    });
+  });
+</script>
+
+---
+
+## Screenshots
+
+### `repobrain index` — 7-stage async pipeline
+
+<img class="screenshot" src="assets/screenshots/screenshot-index.svg" alt="repobrain index" />
+
+### `repobrain status` — Temporal hotspot rankings
+
+<img class="screenshot" src="assets/screenshots/screenshot-status.svg" alt="repobrain status" />
+
+### `repobrain review 42` — PR blast radius analysis
+
+<img class="screenshot" src="assets/screenshots/screenshot-review.svg" alt="repobrain review 42" />
+
+### `repobrain costs` — LLM spend by operation
+
+<img class="screenshot" src="assets/screenshots/screenshot-costs.svg" alt="repobrain costs" />
+
+### MCP Tools — 12 tools available in Claude Code
+
+<img class="screenshot" src="assets/screenshots/screenshot-mcp-tools.svg" alt="repobrain MCP Tools" />
+
+---
 
 ## Why repobrain?
 
-After analyzing repowise (the previous best-in-class codebase intelligence MCP server) in depth, we found **10 critical architectural flaws**. repobrain fixes every one:
+After analyzing repowise in depth, we found **10 critical architectural flaws**. repobrain fixes every one:
 
 | # | Repowise Flaw | repobrain Fix |
 |---|---------------|--------------|
-| 1 | RAG context never used during generation | `RAGAwareDocGenerator` fetches dep docs from LanceDB *before* every LLM call |
+| 1 | RAG context never used during generation | Dependency docs fetched from LanceDB *before* every LLM call |
 | 2 | 25+ min initial indexing | 7-stage async pipeline with `ProcessPoolExecutor` + concurrent git/parse |
 | 3 | No atomic transactions across 3 stores | `AtomicStorageCoordinator` rolls back SQL + LanceDB + NetworkX atomically |
 | 4 | Hardcoded 500-commit limit | Configurable `GitConfig.max_commits = 10_000` |
@@ -36,4 +84,4 @@ repobrain index /path/to/your/repo
 repobrain serve  # start MCP server
 ```
 
-See the [Quick Start guide](getting-started/quickstart.md) for full setup.
+See the [Quick Start guide](getting-started/quickstart.md) for full setup, or [migrate from repowise](reference/migration.md) in 5 minutes.

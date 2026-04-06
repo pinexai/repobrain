@@ -1,0 +1,52 @@
+/* repobrain docs — custom styles */
+
+/* asciinema player */
+.ap-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* terminal screenshots */
+.screenshot {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+
+/* hero section on home page */
+.hero-banner {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* pill badges */
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin: 0 0.2em;
+}
+
+.badge-new {
+  background: #f59e0b;
+  color: #1a1a1a;
+}
+
+.badge-improved {
+  background: #10b981;
+  color: white;
+}
+
+/* risk score colors */
+.risk-high   { color: #ef4444; font-weight: bold; }
+.risk-medium { color: #f59e0b; font-weight: bold; }
+.risk-low    { color: #10b981; font-weight: bold; }

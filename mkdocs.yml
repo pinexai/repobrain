@@ -23,12 +23,21 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.expand
     - toc.integrate
     - content.code.copy
     - content.code.annotate
     - search.highlight
+    - search.suggest
+    - announce.dismiss
   icon:
     repo: fontawesome/brands/github
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - assets/asciinema-player.min.js
 
 nav:
   - Home: index.md
@@ -52,6 +61,17 @@ nav:
     - Indexing Pipeline: architecture/pipeline.md
     - Atomic Transactions: architecture/coordinator.md
     - Temporal Scoring: architecture/temporal.md
+  - Deployment:
+    - Docker: deployment/docker.md
+    - Production: deployment/production.md
+  - Reference:
+    - Python API: reference/api.md
+    - Migration from repowise: reference/migration.md
+    - Contributing: reference/contributing.md
+    - Changelog: reference/changelog.md
+  - Support:
+    - Troubleshooting: support/troubleshooting.md
+    - FAQ: support/faq.md
   - vs. repowise: comparison.md
 
 markdown_extensions:
@@ -63,6 +83,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -71,5 +96,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/pinexai/repobrain
+      name: repobrain on GitHub
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/repobrain/
+      name: repobrain on PyPI
+  version:
+    provider: mike

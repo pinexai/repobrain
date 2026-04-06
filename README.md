@@ -10,6 +10,18 @@
 >
 > repobrain is a codebase intelligence MCP server for Claude that fixes every critical flaw in repowise — then goes further.
 
+## Screenshots
+
+| `repobrain index` | `repobrain review` |
+|---|---|
+| ![index](docs/assets/screenshots/screenshot-index.svg) | ![review](docs/assets/screenshots/screenshot-review.svg) |
+
+| `repobrain status` | `repobrain costs` |
+|---|---|
+| ![status](docs/assets/screenshots/screenshot-status.svg) | ![costs](docs/assets/screenshots/screenshot-costs.svg) |
+
+> **Full interactive demo** at [pinexai.github.io/repobrain](https://pinexai.github.io/repobrain)
+
 ---
 
 ## What's Wrong With Repowise (and How We Fix It)
