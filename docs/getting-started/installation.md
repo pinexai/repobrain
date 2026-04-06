@@ -8,7 +8,7 @@
 ## Install from PyPI
 
 ```bash
-pip install repomind
+pip install repobrain
 ```
 
 ## Install for development

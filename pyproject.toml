@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "repomind"
+name = "repobrain"
 version = "0.1.0"
 description = "Codebase intelligence that thinks ahead — outperforms repowise on every dimension"
 readme = "README.md"

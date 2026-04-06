@@ -1,6 +1,6 @@
 # repomind — Codebase Intelligence That Thinks Ahead
 
-[![PyPI version](https://img.shields.io/pypi/v/repomind.svg)](https://pypi.org/project/repomind/)
+[![PyPI version](https://img.shields.io/pypi/v/repobrain.svg)](https://pypi.org/project/repobrain/)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/pinexai/repomind/actions/workflows/ci.yml/badge.svg)](https://github.com/pinexai/repomind/actions/workflows/ci.yml)
@@ -32,7 +32,7 @@
 ## Installation
 
 ```bash
-pip install repomind
+pip install repobrain
 ```
 
 **Requirements:** Python 3.12+, an Anthropic API key.
