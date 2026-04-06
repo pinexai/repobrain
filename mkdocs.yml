@@ -1,0 +1,75 @@
+site_name: repomind
+site_description: Codebase intelligence that thinks ahead — outperforms repowise on every dimension
+site_url: https://pinexai.github.io/repomind
+repo_url: https://github.com/pinexai/repomind
+repo_name: pinexai/repomind
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - CLI Reference:
+    - Overview: cli/index.md
+    - repomind index: cli/index-cmd.md
+    - repomind review: cli/review.md
+    - repomind serve: cli/serve.md
+    - repomind costs: cli/costs.md
+  - MCP Tools:
+    - Overview: mcp/overview.md
+    - get_pr_impact: mcp/pr-impact.md
+    - get_knowledge_map: mcp/knowledge-map.md
+    - get_test_gaps: mcp/test-gaps.md
+    - get_security_hotspots: mcp/security-hotspots.md
+  - Architecture:
+    - Indexing Pipeline: architecture/pipeline.md
+    - Atomic Transactions: architecture/coordinator.md
+    - Temporal Scoring: architecture/temporal.md
+  - vs. repowise: comparison.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pinexai/repomind
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/repomind/

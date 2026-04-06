@@ -8,14 +8,20 @@ version = "0.1.0"
 description = "Codebase intelligence that thinks ahead — outperforms repowise on every dimension"
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
-authors = [{ name = "pinexai" }]
+license = { file = "LICENSE" }
+authors = [{ name = "Pinaki Mishra", email = "pinaki@pinexai.com" }]
 keywords = ["codebase", "intelligence", "mcp", "claude", "developer-tools"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Documentation",
+    "Typing :: Typed",
 ]
 dependencies = [
     "anthropic>=0.40",
@@ -40,6 +46,13 @@ dependencies = [
     "openai>=1.50",
 ]
 
+[project.urls]
+Homepage = "https://pinexai.github.io/repomind"
+Repository = "https://github.com/pinexai/repomind"
+Documentation = "https://pinexai.github.io/repomind"
+"Bug Tracker" = "https://github.com/pinexai/repomind/issues"
+Changelog = "https://github.com/pinexai/repomind/blob/main/CHANGELOG.md"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
@@ -48,6 +61,10 @@ dev = [
     "ruff>=0.6",
     "mypy>=1.11",
     "types-networkx",
+    "mkdocs-material>=9.5",
+    "mkdocs-autorefs>=1.0",
+    "twine>=5.0",
+    "build>=1.2",
 ]
 
 [project.scripts]
